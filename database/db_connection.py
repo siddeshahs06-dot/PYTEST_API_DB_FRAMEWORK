@@ -1,6 +1,6 @@
 import mysql.connector
 #from utils.config_reader import get_config
-from PYTEST_API_DB_FRAMEWORK.utils.config_reader import get_config
+from utils.config_reader import get_config
 
 
 
