@@ -1,5 +1,5 @@
-from PYTEST_API_DB_FRAMEWORK.api.user_api import get_user
-from PYTEST_API_DB_FRAMEWORK.database.db_queries import get_user_name
+from api.user_api import get_user
+from database.db_queries import get_user_name
 
 
 def test_validate_user(base_url, db_connection, test_data):
