@@ -1,4 +1,4 @@
-import pymysql.connector
+import mysql.connector
 #from utils.config_reader import get_config
 from utils.config_reader import get_config
 
