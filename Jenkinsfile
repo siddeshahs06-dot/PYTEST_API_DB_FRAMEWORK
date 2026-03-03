@@ -1,3 +1,8 @@
+pipeline {
+    agent any
+
+    stages {
+
 stage('Install Dependencies') {
     steps {
         bat '''
@@ -6,5 +11,7 @@ stage('Install Dependencies') {
         pip install --upgrade pip
         pip install -r requirements.txt
         '''
+    }
+}
     }
 }
