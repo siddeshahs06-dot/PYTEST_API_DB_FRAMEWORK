@@ -13,7 +13,7 @@ def connect_db():
         host=config["DB"]["host"],
         user=config["DB"]["user"],
         password=config["DB"]["password"],
-        database=config["DB"]["database"]
+        database=config["DB"]["database"],
         use_pure=True
     )
 
