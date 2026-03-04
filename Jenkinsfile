@@ -3,15 +3,23 @@ pipeline {
 
     stages {
 
-stage('Install Dependencies') {
-    steps {
-        bat '''
-        python --version
-        pip --version
-        pip install --upgrade pip
-        pip install -r requirements.txt
-        '''
-    }
-}
+        stage('Install Dependencies') {
+            steps {
+                bat '''
+                "C:\\Program Files\\Python311\\python.exe" --version
+                "C:\\Program Files\\Python311\\python.exe" -m pip install --upgrade pip
+                "C:\\Program Files\\Python311\\python.exe" -m pip install -r requirements.txt
+                '''
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                bat '''
+                "C:\\Program Files\\Python311\\python.exe" -m pytest -v -s
+                '''
+            }
+        }
+
     }
 }
