@@ -1,11 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('Test Python') {
+        stage('Upgrade Pip') {
             steps {
-                bat 'where python'
-                bat 'python --version'
-                bat 'python -c "print(123)"'
+                bat 'python -m pip install --upgrade pip'
+            }
+        }
+
+        stage('Install Requirements') {
+            steps {
+                bat 'python -m pip install -r requirements.txt'
             }
         }
     }
