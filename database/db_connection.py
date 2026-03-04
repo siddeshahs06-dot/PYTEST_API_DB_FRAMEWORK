@@ -14,6 +14,7 @@ def connect_db():
         user=config["DB"]["user"],
         password=config["DB"]["password"],
         database=config["DB"]["database"]
+        use_pure=True
     )
 
     return connection
